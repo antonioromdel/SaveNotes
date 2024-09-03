@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloc de Notas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="layaout">
+
+        <section class="ventana__modal">
+
+            <header class="modal__header">
+
+                <div class="header__btn header__btn-exit">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+                        <path d="M 11.480469 5.0058594 C 10.500482 5.0058442 9.521297 5.3771405 8.7792969 6.1191406 L 6.1191406 8.7792969 C 4.6346201 10.26247 4.6351404 12.69764 6.1191406 14.181641 L 15.9375 24 L 6.1191406 33.818359 C 4.6346201 35.301533 4.6351404 37.736703 6.1191406 39.220703 L 8.7792969 41.880859 C 10.26247 43.36538 12.69764 43.36486 14.181641 41.880859 L 24 32.0625 L 33.818359 41.880859 C 35.301533 43.36538 37.736703 43.36486 39.220703 41.880859 L 41.880859 39.220703 C 43.36538 37.73753 43.36486 35.30236 41.880859 33.818359 L 32.0625 24 L 41.880859 14.181641 C 43.36538 12.698467 43.36486 10.263297 41.880859 8.7792969 L 39.220703 6.1191406 C 37.73753 4.6346201 35.30236 4.6351404 33.818359 6.1191406 L 24 15.9375 L 14.181641 6.1191406 C 13.440054 5.3768804 12.460456 5.0058746 11.480469 5.0058594 z M 11.480469 6.9921875 C 11.944232 6.9921723 12.408165 7.1734634 12.767578 7.5332031 L 23.292969 18.058594 A 1.0001 1.0001 0 0 0 24.707031 18.058594 L 35.232422 7.5332031 C 35.952422 6.8132033 37.087814 6.8137237 37.806641 7.5332031 L 40.466797 10.193359 C 41.186797 10.913359 41.186276 12.048752 40.466797 12.767578 L 29.941406 23.292969 A 1.0001 1.0001 0 0 0 29.941406 24.707031 L 40.466797 35.232422 C 41.186797 35.952422 41.186276 37.087814 40.466797 37.806641 L 37.806641 40.466797 C 37.086641 41.186797 35.951248 41.186276 35.232422 40.466797 L 24.707031 29.941406 A 1.0001 1.0001 0 0 0 23.292969 29.941406 L 12.767578 40.466797 C 12.047578 41.186797 10.912186 41.186276 10.193359 40.466797 L 7.5332031 37.806641 C 6.8132033 37.086641 6.8137237 35.951248 7.5332031 35.232422 L 18.058594 24.707031 A 1.0001 1.0001 0 0 0 18.058594 23.292969 L 7.5332031 12.767578 C 6.8132033 12.047578 6.8137237 10.912186 7.5332031 10.193359 L 10.193359 7.5332031 C 10.553359 7.1732032 11.016706 6.9922027 11.480469 6.9921875 z"></path>
+                    </svg>
+                </div>
+
+                <h1 class="header__title">Nueva nota</h1>
+
+                <div class="header__btn header__btn-save">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 64 64">
+                        <path fill="#fd3c4f" d="M46.676,54.599L33.205,44.87c-0.715-0.517-1.685-0.503-2.386,0.033l-12.662,9.683	C16.865,55.574,15,54.652,15,53.025V11c0-2.209,1.791-4,4-4h27c2.209,0,4,1.791,4,4v41.899C50,54.61,48.062,55.601,46.676,54.599z"></path><path d="M45,38v7.265c0,0.816-0.924,1.288-1.586,0.811l-1.308-0.945c-2.24-1.615-5.365-1.113-6.981,1.126l0,0	l11.551,8.342C48.062,55.601,50,54.61,50,52.899V33C47.238,33,45,35.238,45,38z" opacity=".15"></path><ellipse cx="32" cy="61" opacity=".3" rx="20.125" ry="3"></ellipse><path fill="#fff" d="M15,11v18c2.762,0,5-2.238,5-5V12.652c0-0.42,0.264-0.795,0.66-0.934 C22.605,11.033,24,9.18,24,7h-5C16.791,7,15,8.791,15,11z" opacity=".3"></path><line x1="18.5" x2="18.5" y1="12.5" y2="19.5" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3"></line><circle cx="48.54" cy="32.551" r="11" fill="#98c900"></circle><line x1="42.5" x2="54.5" y1="32.5" y2="32.5" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3"></line><line x1="48.5" x2="48.5" y1="26.5" y2="38.5" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3"></line>
+                    </svg>
+                </div>
+
+            </header>
+
+            
+                <form action="" class="modal__form">
+
+                    <div class="form__first">
+                        <label for="input" class="form__label">Nombre Tarea</label>
+                        <input type="text" class="form__input" id="input">
+    
+                    </div>
+                    
+                    <div class="form__second">
+                        <label for="textarea" class="form__label">Descripción</label>
+                        <textarea name="" id="textarea" class="form__input-textarea"></textarea>
+                    </div>
+    
+                </form>
+    
+                <div class="modal__saved">
+                    <div class="saved__elements">
+                        <img src="img/icono.gif" alt="">
+                        <h2 class="saved__title">¡Nota guardada correctamente!</h2>
+                    </div>
+                    <div class="saved__saving"></div>
+                </div>
+
+
+        </section>
+
+        <main class="layaout__main">
+
+            <div class="main__container-btn">
+                
+                <button class="main__btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg> 
+                    <span class="btn__text">Añadir Nota</span>                          
+                </button>
+
+            </div>
+            <section class="main__notes">
+
+                <h1 class="notes__title">Sin notas guardadas.</h1>
+
+            </section>
+
+        </main>
+
+        <div class="confirm__delete">
+
+            <h2 class="delete_title">¿Desea eliminar esta nota?</h2>
+
+            <form action="" class="delete__form">
+
+                <div class="form__yes">
+                    <label class="yes__label" for="yes">Si</label>
+                    <input type="checkbox" class="yes__input" id="yes">
+                </div>
+                <div class="form__no">
+                    <label for="no" class="no__label">No</label>
+                    <input type="checkbox" class="no__input" id="no">
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+</body>
+</html>

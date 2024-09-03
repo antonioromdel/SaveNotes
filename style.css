@@ -1,0 +1,356 @@
+html{
+    font-size: 10px;
+}
+
+body{
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+}
+
+.layaout{
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    background-color: azure;
+    padding: 3rem;
+
+}
+
+.layaout__main{
+    width: 100%;
+    transition: all .3s ease;
+}
+
+.main__container-btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main__btn{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: rgb(207, 59, 59);
+    padding: 1rem;
+    color: white;
+    cursor: pointer;
+    transition: all .3s linear;
+}
+
+.main__btn:hover{
+    background-color: red;
+    transform: scale(1.1);
+}
+
+.btn__text{
+    font-weight: 500;
+}
+
+.main__notes{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+}
+
+.notes__note{
+    width: 500px;
+    z-index: 400000;
+}
+
+.note__header svg{
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.note__header svg:hover{
+    transform: scale(1.2);
+}
+
+
+.note__header{
+    color: white;
+    background-color: rgb(207, 59, 59);
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.header__input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: white;
+}
+
+.note__body{
+    width: 100%;
+    height: 40rem;
+    border-radius: 0 0 5px 5px;
+    background-color: rgba(144, 233, 233, 0.493);
+    border: none;
+    outline: none;
+    resize: none;
+    text-align: left;
+    padding: 2rem;
+}
+
+.ventana__modal{
+    width: 100rem;
+    height: 40rem;
+    position: absolute;
+    top: 15rem;
+    left: 20%;
+    display: flex;    
+    flex-direction: column; 
+    box-shadow: 0 0 15px;
+    border-radius: 10px;
+    transition: all .5s ease;
+    opacity: 0;
+}
+
+.show{
+    opacity: 1;
+}
+
+.showIndex{
+    z-index: 400000;
+}
+
+.modal__header{
+    width: 100%;
+    height: 30%;
+    background-color: rgb(207, 59, 59);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px 10px 0 0;
+}
+
+.modal__form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(144, 233, 233);
+    border-radius: 0 0 10px 10px;
+    padding-bottom: 1.5rem;
+    
+}
+
+.form__first, .form__second{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.form__input, .form__input-textarea{
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    text-align: center;
+    transition: all .3s ease;
+}
+
+.form__input{
+    width: 40rem;
+    height: 3rem;
+    padding: 1rem;
+}
+
+.form__input-textarea{
+    width: 50rem;
+    height: 15rem;
+    padding: 2rem;
+    resize: none;
+}
+
+.form__input:focus, .form__input-textarea:focus{
+    box-shadow: 0 0 10px;
+}
+
+.header__btn{
+    width: 20px;
+    height: 20px;
+}
+
+.header__btn svg{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.header__btn svg:hover{
+    transform: scale(1.1);
+}
+
+.modal__saved{
+    width: 100%;
+    height: 100%;
+    position: absolute;   
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: rgba(144, 233, 233, 0.493);
+}
+
+.saved__elements{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.saved__saving{
+    width: 50%;
+    height: 0.8rem;
+    background-color: green;
+    border-radius: 20px;
+    animation: loaded_bar 2s ease-out;
+    
+}
+
+.notes__title{
+    text-align: center;
+}
+
+@keyframes loaded_bar {
+    0%{
+        width: 0;
+    }
+
+    100%{
+        width: 50%;
+    }
+}
+
+.confirm__delete{
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    opacity: 1;
+    width: 50rem;
+    text-align: center;
+    padding: 3rem;
+    box-shadow: 0 0 15px;
+    border-radius: 10px;
+    transition: all .3s ease;
+    opacity: 0;
+    background-color: aquamarine;
+}
+
+.show__delete{
+    opacity: 1;
+
+}
+
+.delete__form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.yes__input, .no__input{
+    display: none;
+}
+
+.yes__label, .no__label{
+    cursor: pointer;
+    width: 15rem;
+    background-color:rgba(144, 233, 233, 0.493);
+    text-align: center;
+    border-radius: 10px;
+    transition: all .3s ease;
+
+}
+
+.yes__label:hover{
+    background-color: green;
+}
+
+.no__label:hover{
+    background-color: rgb(207, 59, 59);
+}
+
+@media (max-width: 800px) {
+    .main__btn{
+        z-index: 5;
+    }
+    .main__notes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .notes__note {
+        width: 90%;  /* Aumentar el ancho de las notas para pantallas pequeñas */
+        margin-bottom: 2rem;
+        z-index: 10;
+    }
+
+    .ventana__modal {
+        width: 90%;  /* Reducir el ancho del modal para pantallas pequeñas */
+        top: 10rem;
+        left: 5%;
+        
+    }
+
+    .modal__header{
+        height: 60px;
+        padding: 1rem;
+        display: flex;
+        align-items:start;
+        justify-content: space-around;
+    }
+
+    .modal__form{
+        padding-top: 2rem;
+        gap: 2rem;
+    }
+
+    .form__first, .form__second{
+        width: 90%;
+    }
+
+    .form__input, .form__input-textarea {
+        width: 100%;  /* Ajustar el ancho de los inputs para pantallas pequeñas */
+    }
+
+    .confirm__delete {
+        width: 90%;  /* Ajustar el ancho del cuadro de confirmación para pantallas pequeñas */
+        top: 5%;
+        left: 5%;
+    }
+    .yes__label, .no__label{
+        background-color: aqua;
+        width: 10rem;
+        padding: 2rem;
+        text-align: center;
+        font-weight: bold;
+        box-shadow: 0 0 5px;
+    }
+    
+
+
+}
